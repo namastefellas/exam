@@ -1,0 +1,44 @@
+[
+{
+  "model": "webapp.guestbook",
+  "pk": 1,
+  "fields": {
+    "user_name": "Bruh",
+    "user_email": "bruh@bruh.com",
+    "user_text": "Some really bruh text here.",
+    "date_start": "2021-03-06T06:43:32.148Z",
+    "date_edit": "2021-03-06T06:43:32.148Z",
+    "status": "blocked"
+  }
+},
+{
+  "model": "webapp.guestbook",
+  "pk": 2,
+  "fields": {
+    "user_name": "John Doe",
+    "user_email": "john_doe@gmail.com",
+    "user_text": "There is some text just for filling this text field.",
+    "date_start": "2021-03-06T06:45:05.015Z",
+    "date_edit": "2021-03-06T06:45:05.015Z",
+    "status": "blocked"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$216000$g5i8XpVq6Naj$Dzsnp8fNy6TFlSa6F8HkPHG2ElJezSgmKSNZTMZebfE=",
+    "last_login": "2021-03-06T06:32:14.010Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "admin@admin.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2021-03-06T06:31:29.041Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]
