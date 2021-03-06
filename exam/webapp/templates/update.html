@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block menu %}
+{% endblock menu %}
+{% block title %}Update Guest Info{% endblock %}
+{% block content %}
+
+<form method="POST" action="{% url 'update_info' guest.id %}">
+    {% include "partial/guest_form.html" with button_text="Edit" %}
+</form>
+{% endblock %}
