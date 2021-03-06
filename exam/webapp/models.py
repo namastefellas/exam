@@ -10,6 +10,7 @@ class GuestBook(models.Model):
     date_edit = models.DateTimeField(auto_now=True, null=False, blank=False)
     status = models.TextField(null=False, default='active', choices=status_choices)
 
+
     class Meta:
         db_table = 'GuestBook'
         verbose_name = 'Guest'
