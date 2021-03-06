@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block menu %}
+{% endblock %}
+{% block content %}
+<form action="{% url 'add_guest' %}" method="post">
+{% csrf_token %}
+<label>Name: </label><br/>
+<input type="text" name="user_name"/><br/>
+<label>Email: </label><br/>
+<input type="text" name="user_email"/><br/>
+<label>Text: </label>
+<textarea name="user_text"></textarea><br/>
+<input type="submit" value="Send"/>
+</form>
+{% endblock %}
