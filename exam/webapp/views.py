@@ -16,7 +16,7 @@ def add_new_guest(request, *args, **kwargs):
     elif request.method == 'POST':
         form = GuestBookForm(data=request.POST)
         if form.is_valid():
-            guest = GuestBook.objects.create(
+            GuestBook.objects.create(
                 user_name=form.cleaned_data['user_name'],
                 user_email=form.cleaned_data['user_email'],
                 user_text=form.cleaned_data['user_text']
@@ -45,3 +45,12 @@ def guest_update_view(request, pk):
             return redirect('index')
         else:
             return render(request, 'update.html', context={'form': form, 'guest': guest})
+
+
+def delete_guest(request, pk):
+    guests = get_object_or_404(GuestBook, pk=pk)
+    if request.method == 'GET':
+        return render(request, 'guest_delete.html', context={'guest': guests})
+    elif request.method == 'POST':
+        guests.delete()
+        return redirect('index')

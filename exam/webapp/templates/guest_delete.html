@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block menu %}
+{% endblock %}
+{% block content %}
+<h1>Are you sure want to delete guest? "{{ user_name }}"?</h1>
+<form method="POST" action="{% url 'guest_delete' guest.id %}">
+    {% csrf_token %}
+        <p><input type="submit" value="Confirm"></p>
+        <p><a href="{% url 'index' %}" type="button">Cancel</a></p>
+</form>
+{% endblock %}
